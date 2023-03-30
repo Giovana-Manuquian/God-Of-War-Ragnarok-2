@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('../img/kratos-home.png');
+    background-size: auto;
+
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    padding-top: 30px;
+    background-color: transparent !important;
+}
+
+
+.cabecalho-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.cabecalho-menu a:hover {
+    background-color: rgb(209, 204, 198);
+    color: black;
+    transition: 0.5s;
+    opacity: 0.3;
+    border-radius: 3px;
+    letter-spacing: 2px;
+}
+
+.menu-item {
+    font-size: 16px;
+    font-family: Rajdhan;
+    font-weight: 100;
+    color: whitesmoke;
+
+}
+
+ @media only screen and (max-width: 652px) {
+
+    body {
+    background-image: url('../img/small.png');
+    background-size: auto;
+} 
+
+}
+
+/* min-width: 1024px
+min-width: 768px
+min-width: 375px
+*/
