@@ -51,6 +51,7 @@ body {
     body {
     background-image: url('../img/small.png');
     background-size: auto;
+    height: 100%;
 } 
 
 }
