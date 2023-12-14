@@ -1,62 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-body {
-    background-image: url('../img/kratos-home.png');
-    background-size: auto;
-
-}
-
-.cabecalho {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    padding: 15px;
-    padding-top: 30px;
-    background-color: transparent !important;
-}
-
-
-.cabecalho-menu {
-    display: flex;
-    gap: 25px;
-}
-
-.cabecalho-menu a:hover {
-    background-color: rgb(209, 204, 198);
-    color: black;
-    transition: 0.5s;
-    opacity: 0.3;
-    border-radius: 3px;
-    letter-spacing: 2px;
-}
-
-.menu-item {
-    font-size: 16px;
-    font-family: Rajdhan;
-    font-weight: 100;
-    color: whitesmoke;
-
-}
-
- @media only screen and (max-width: 655px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
 
     body {
-    background-image: url('../img/small.png');
-    background-size: auto;
-    height: 100%;
-} 
+        background-image: url('../img/kratos-home.png');
+        background-size: cover; /* Utilize 100vw e 100vh para cobrir completamente a largura e altura da tela */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .cabecalho {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        padding-top: 30px;
+        background-color: transparent !important;
+    }
 
-}
 
-/* min-width: 1024px
-min-width: 768px
-min-width: 375px
-*/
+    .cabecalho-menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .cabecalho-menu a:hover {
+        background-color: rgb(209, 204, 198);
+        color: black;
+        transition: 0.5s;
+        opacity: 0.3;
+        border-radius: 3px;
+        letter-spacing: 2px;
+    }
+
+    .menu-item {
+        font-size: 16px;
+        font-family: Rajdhan;
+        font-weight: 100;
+        color: whitesmoke;
+
+    }
+
+    .central {
+        width: 480px;
+        height: 480px;
+        position: relative;
+    }
+
+    .grande {
+        width: 480px;
+        height: 480px;
+        border-radius: 0;
+        animation-name: logo;
+        animation-duration: 6s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+        filter: opacity(0);
+    }
+    
+    .grande img {
+        width: 100%;
+        filter: opacity(.95);
+        margin-left: 110%;
+    }
+
+    .smoke {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        background-image: url(../img/smoke.jpeg);
+        mix-blend-mode: screen;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        filter: opacity(.30);
+        background-size: 300%;
+        animation-name: smoke;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes logo {
+        from {
+            filter: opacity(0);
+        }
+    
+        to {
+            filter: opacity(1);
+        }
+    }
+
+    @keyframes smoke {
+        0% {
+            background-position: left top;
+            filter: opacity(0);
+        }
+    
+        20% {
+            filter: opacity(.15);
+        }
+    
+        80% {
+            filter: opacity(.15);
+        }
+    
+        100% {
+            background-position: right bottom;
+            filter: opacity(0);
+        }
+    }
+
+    @media only screen and (max-width: 655px) {
+
+        body {
+        background-image: url('../img/small.png');
+        background-size: auto;
+        height: 100%;
+    } 
+
+    }
+
+    /* min-width: 1024px
+    min-width: 768px
+    min-width: 375px
+    */
